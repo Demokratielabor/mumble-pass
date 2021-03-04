@@ -17,11 +17,11 @@ salt = pl_random.randbytes(8)
 generated_hash = pl_digest.pbkdf2_hmac("sha384", password, salt, rounds)
 
 print(
-    """Username:\t{}
-Password:\t{}
-Hash:\t\t{}
-Salt:\t\t{}
-Rounds:\t\t{}""".format(
+    """Username: {}
+Password: {}
+Hash:     {}
+Salt:     {}
+Rounds:   {}""".format(
         username,
         password,
         binascii.hexlify(generated_hash).decode(),
